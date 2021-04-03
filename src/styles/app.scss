@@ -1,3 +1,5 @@
+@import 'colors';
+
 * {
     box-sizing: border-box;
 
@@ -24,7 +26,8 @@ body {
 }
 
 #root {
-    background: var(--bgColor);
+    //background: var(--bgColor);
+    background: $color-background;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -95,15 +98,15 @@ body {
 }
 
 .color-red {
-    background-color: var(--red);
+    background-color: $color-red;
 }
 
 .color-blue {
-    background-color: var(--blue);
+    background-color: $color-blue;
 }
 
 .color-yellow {
-    background-color: var(--yellow);
+    background-color: $color-yellow;
 }
 
 .card-content:hover {
@@ -116,7 +119,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 0 1px var(--bgColor);
+    box-shadow: inset 0 0 0 1px $color-background;
     z-index: -1;
 }
 

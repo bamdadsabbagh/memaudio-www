@@ -1,4 +1,5 @@
 @import '~sass-reset';
+@import 'colors';
 @import 'app';
 @import 'app-responsive';
 
@@ -10,17 +11,17 @@
 
 .icon-next:hover, .icon-next:active {
     cursor: pointer;
-    color: var(--yellow);
+    color: $color-yellow;
 }
 
 .icon-minus:hover, .icon-minus:active {
     cursor: pointer;
-    color: var(--blue);
+    color: $color-blue;
 }
 
 .icon-plus:hover, .icon-plus:active {
     cursor: pointer;
-    color: var(--red);
+    color: $color-red;
 }
 
 // animation-flip.css
