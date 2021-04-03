@@ -2,7 +2,6 @@ import React from 'react'
 import { useSpring, animated as a } from 'react-spring'
 import { StoreMap } from '../store/store-map'
 import { AnimationFadeIn } from './animation-fade-in'
-import './animation-flip.css'
 
 export const AnimationFlip = StoreMap (({
     page, game, Key, flipMe, Front, Back, isGame, noClickFront, noClickBack,

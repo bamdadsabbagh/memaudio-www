@@ -2,8 +2,6 @@ import React from 'react'
 import {
     BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom'
-import './app.css'
-import './app-responsive.css'
 import { StoreMap } from '../store/store-map'
 import { Player } from './player'
 import { PageHome } from '../page/page-home'

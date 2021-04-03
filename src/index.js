@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { LayoutBackground } from './components/app-background'
-import 'normalize.css'
 import { store } from './store'
 import { App } from './components/app'
+import './styles/main.scss'
 
 const Root = () => (
     <>
