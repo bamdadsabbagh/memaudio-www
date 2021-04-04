@@ -1,4 +1,4 @@
-const myColors = {
+export const layoutBackgroundColors = {
     'bgColor': '#32386D',
     'red': '#FD3359',
     'yellow': '#F4D302',
@@ -14,5 +14,3 @@ const myColors = {
     'pink': '#dd7373',
     'keppel': '#3891a6',
 }
-
-export default myColors

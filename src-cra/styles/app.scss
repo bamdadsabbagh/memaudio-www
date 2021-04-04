@@ -26,7 +26,6 @@ body {
 }
 
 #root {
-    //background: var(--bgColor);
     background: $color-background;
     overflow: hidden;
     position: relative;
@@ -47,7 +46,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    color: var(--bgColor);
+    color: $color-background;
     z-index: 0;
 }
 
