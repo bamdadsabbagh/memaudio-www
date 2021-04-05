@@ -1,12 +1,11 @@
-@import 'src/styles/colors';
+import styled from 'styled-components'
 
-.container {
-    //background-color: $color-background;
+export const StyledContainer = styled.div`
     background-color: transparent;
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
-}
+    //pointer-events: none;
+`

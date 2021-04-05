@@ -1,33 +1,11 @@
 import React from 'react'
 import CardComponent from '@/components/card/card.component'
-import styled from 'styled-components'
+import { StyledContainer, StyledGrid } from '@/components/card-grid/card-grid.styles'
 
-const StyledContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+export default function CardGridComponent ({ children }) {
 
-    width: 450px;
-    height: 450px;
-`
-
-const StyledGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(${props => props.size}, 1fr);
-    grid-template-rows: repeat(${props => props.size}, 1fr);
-    width: 100%;
-    height: 100%;
-    grid-gap: 0.333rem;
-`
-
-/**
- * grid containing cards in a square fashion
- * @param children
- * @return {JSX.Element}
- * @constructor
- */
-export default function CardGrid ({ children }) {
-
+    // const [size, setSize] = useRecoilState (CardGridStateSize)
+    // size = setSize (children.length ** 0.5)
     let size = children.length ** 0.5
 
     // if is not a perfect square, round it up to the next
@@ -47,9 +25,9 @@ export default function CardGrid ({ children }) {
                                     {children}
                                 </CardComponent>
                             :
-                            children.map (child => (
-                                // eslint-disable-next-line react/jsx-props-no-spreading
-                                <CardComponent {...child.props} size={size}>
+                            children.map ((child, key) => (
+                                // eslint-disable-next-line react/jsx-props-no-spreading,react/no-array-index-key
+                                <CardComponent {...child.props} size={size} key={key}>
                                     {child}
                                 </CardComponent>
                             ))

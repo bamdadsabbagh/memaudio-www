@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import CardGrid from '@/components/card-grid'
+import CardGridModule from '@/components/card-grid/card-grid.module'
 
 export default function PageIndex () {
 
@@ -12,15 +12,15 @@ export default function PageIndex () {
                 </title>
             </Head>
             <>
-                <CardGrid>
-                    <div noBack>1</div>
+                <CardGridModule>
+                    <div noback="true">1</div>
                     <div>2</div>
                     <div>3</div>
                     <div>4</div>
                     <div>4</div>
                     <div>4</div>
                     <div>4</div>
-                </CardGrid>
+                </CardGridModule>
             </>
         </>
     )
