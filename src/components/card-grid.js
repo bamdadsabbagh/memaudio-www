@@ -42,7 +42,7 @@ export default function CardGrid ({ children }) {
                             :
                             children.map (child => (
                                 <Card size={size}>
-                                    {child.props.children}
+                                    {child}
                                 </Card>
                             ))
                     }

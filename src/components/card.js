@@ -7,7 +7,6 @@ const StyledContainer = styled.div`
     justify-content: center;
     align-items: center;
     user-select: none;
-    background: black;
 `
 
 const StyledCard = styled (animated.div)`
@@ -22,10 +21,18 @@ const StyledCard = styled (animated.div)`
     width: calc(450px / ${props => props.size});
     height: calc(450px / ${props => props.size});
 
-    cursor: pointer;
-    //will-change: transform, opacity;
+    box-shadow: inset 0 0 0 1px ${props => props.theme.colors.background};
 
-    box-shadow: inset 0 0 0 1px #32386D;
+    cursor: pointer;
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+    }
 `
 
 const StyledCardFront = styled (StyledCard)`
