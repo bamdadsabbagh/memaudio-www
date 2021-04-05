@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '@/components/card'
+import CardComponent from '@/components/card/card.component'
 import styled from 'styled-components'
 
 const StyledContainer = styled.div`
@@ -43,15 +43,15 @@ export default function CardGrid ({ children }) {
                         size === 1
                             ?
                             // eslint-disable-next-line react/jsx-props-no-spreading
-                                <Card {...children.props} size={size}>
+                                <CardComponent {...children.props} size={size}>
                                     {children}
-                                </Card>
+                                </CardComponent>
                             :
                             children.map (child => (
                                 // eslint-disable-next-line react/jsx-props-no-spreading
-                                <Card {...child.props} size={size}>
+                                <CardComponent {...child.props} size={size}>
                                     {child}
-                                </Card>
+                                </CardComponent>
                             ))
                     }
                 </StyledGrid>

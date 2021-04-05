@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
-import { useSpring, animated } from 'react-spring'
+import { useSpring } from 'react-spring'
+import { StyledContainer, StyledCardFront, StyledCardBack } from '@/components/card/card.styles'
 
-export default function Card ({ size, children }) {
+export default function CardComponent ({ size, children }) {
 
     const [flipped, setFlipped] = useState (false)
 
@@ -38,43 +38,3 @@ export default function Card ({ size, children }) {
     )
 
 }
-
-const StyledContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-`
-
-export const StyledCard = styled (animated.div)`
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    max-width: calc(450px / ${props => props.size});
-    max-height: calc(450px / ${props => props.size});
-    width: calc(450px / ${props => props.size});
-    height: calc(450px / ${props => props.size});
-
-    box-shadow: inset 0 0 0 1px ${props => props.theme.colors.background};
-
-    > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-
-        cursor: pointer;
-    }
-`
-
-const StyledCardFront = styled (StyledCard)`
-    background: darkgray;
-`
-
-const StyledCardBack = styled (StyledCard)`
-    background: lightgray;
-`
