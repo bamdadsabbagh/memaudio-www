@@ -15,11 +15,17 @@ const StyledGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(${props => props.size}, 1fr);
     grid-template-rows: repeat(${props => props.size}, 1fr);
-    height: 100%;
     width: 100%;
+    height: 100%;
     grid-gap: 0.333rem;
 `
 
+/**
+ * grid containing cards in a square fashion
+ * @param children
+ * @return {JSX.Element}
+ * @constructor
+ */
 export default function CardGrid ({ children }) {
 
     let size = children.length ** 0.5

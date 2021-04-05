@@ -13,9 +13,12 @@ export default function PageIndex () {
             </Head>
             <>
                 <CardGrid>
-                    <div no-back>1</div>
+                    <div noBack>1</div>
                     <div>2</div>
                     <div>3</div>
+                    <div>4</div>
+                    <div>4</div>
+                    <div>4</div>
                     <div>4</div>
                 </CardGrid>
             </>

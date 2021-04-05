@@ -2,50 +2,11 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 
-const StyledContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-`
-
-const StyledCard = styled (animated.div)`
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    max-width: calc(450px / ${props => props.size});
-    max-height: calc(450px / ${props => props.size});
-    width: calc(450px / ${props => props.size});
-    height: calc(450px / ${props => props.size});
-
-    box-shadow: inset 0 0 0 1px ${props => props.theme.colors.background};
-
-    cursor: pointer;
-
-    > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 100%;
-        height: 100%;
-    }
-`
-
-const StyledCardFront = styled (StyledCard)`
-    background: darkgray;
-`
-
-const StyledCardBack = styled (StyledCard)`
-    background: lightgray;
-`
-
 export default function Card ({ size, children }) {
 
     const [flipped, setFlipped] = useState (false)
+
+    console.log (children.props)
 
     const { opacity, transform } = useSpring ({
         'opacity': flipped ? 1 : 0,
@@ -63,13 +24,57 @@ export default function Card ({ size, children }) {
             >
                 {children}
             </StyledCardFront>
-            <StyledCardBack
-                size={size}
-                style={{ opacity, 'transform': transform.interpolate (t => `${t} rotateY(180deg)`) }}
-            >
-                {children}
-            </StyledCardBack>
+            {
+                children.props.noBack
+                ??
+                <StyledCardBack
+                    size={size}
+                    style={{ opacity, 'transform': transform.interpolate (t => `${t} rotateY(180deg)`) }}
+                >
+                    {children}
+                </StyledCardBack>
+            }
         </StyledContainer>
     )
 
 }
+
+const StyledContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+`
+
+export const StyledCard = styled (animated.div)`
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: calc(450px / ${props => props.size});
+    max-height: calc(450px / ${props => props.size});
+    width: calc(450px / ${props => props.size});
+    height: calc(450px / ${props => props.size});
+
+    box-shadow: inset 0 0 0 1px ${props => props.theme.colors.background};
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        cursor: pointer;
+    }
+`
+
+const StyledCardFront = styled (StyledCard)`
+    background: darkgray;
+`
+
+const StyledCardBack = styled (StyledCard)`
+    background: lightgray;
+`
