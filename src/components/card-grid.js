@@ -36,12 +36,14 @@ export default function CardGrid ({ children }) {
                     {
                         size === 1
                             ?
-                                <Card size={size}>
+                            // eslint-disable-next-line react/jsx-props-no-spreading
+                                <Card {...children.props} size={size}>
                                     {children}
                                 </Card>
                             :
                             children.map (child => (
-                                <Card size={size}>
+                                // eslint-disable-next-line react/jsx-props-no-spreading
+                                <Card {...child.props} size={size}>
                                     {child}
                                 </Card>
                             ))

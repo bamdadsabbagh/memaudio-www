@@ -36,11 +36,11 @@ const StyledCard = styled (animated.div)`
 `
 
 const StyledCardFront = styled (StyledCard)`
-    background: red;
+    background: darkgray;
 `
 
 const StyledCardBack = styled (StyledCard)`
-    background: blue;
+    background: lightgray;
 `
 
 export default function Card ({ size, children }) {
@@ -49,7 +49,7 @@ export default function Card ({ size, children }) {
 
     const { opacity, transform } = useSpring ({
         'opacity': flipped ? 1 : 0,
-        'transform': `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+        'transform': `perspective(600px) rotateY(${flipped ? -180 : 0}deg)`,
         'config': { 'mass': 10, 'tension': 500, 'friction': 80 },
     })
 
