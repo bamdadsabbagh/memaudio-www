@@ -4,8 +4,10 @@ export const StyledTheme = {
         'red': '#FD3359',
         'yellow': '#F4D302',
         'blue': '#21BDFF',
+        'white': 'white',
+        'black': 'black',
     },
-    'width': {
-        'viewport': '450', // px
+    'size': {
+        'viewport': 500, // px
     },
 }

@@ -23,19 +23,19 @@ export default function CardComponent ({ size, children }) {
                 {children}
             </StyledCardFront>
             {
-                !children.props.noback
+                children.props.noback
                     ?
-                        <StyledCardBack
-                            size={size}
-                            style={{
-                                opacity,
-                                'transform': transform.interpolate (t => `${t} rotateY(180deg)`),
-                            }}
-                        >
-                            {children}
-                        </StyledCardBack>
-                    :
                     null
+                    :
+                    <StyledCardBack
+                        size={size}
+                        style={{
+                            opacity,
+                            'transform': transform.interpolate (t => `${t} rotateY(180deg)`),
+                        }}
+                    >
+                        {children}
+                    </StyledCardBack>
             }
         </StyledContainer>
     )

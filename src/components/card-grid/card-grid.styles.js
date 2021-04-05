@@ -5,8 +5,11 @@ export const StyledContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    width: 450px;
-    height: 450px;
+    //width: 450px;
+    //height: 450px;
+
+    width: 100%;
+    height: 100%;
 `
 
 export const StyledGrid = styled.div`

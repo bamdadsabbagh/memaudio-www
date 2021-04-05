@@ -6,6 +6,7 @@ export const StyledContainer = styled.div`
     justify-content: center;
     align-items: center;
     user-select: none;
+    cursor: pointer;
 `
 
 export const StyledCard = styled (animated.div)`
@@ -15,12 +16,10 @@ export const StyledCard = styled (animated.div)`
     justify-content: center;
     align-items: center;
 
-    max-width: calc(${props => props.theme.width.viewport}px / ${props => props.size});
-    max-height: calc(${props => props.theme.width.viewport}px / ${props => props.size});
-    width: calc(${props => props.theme.width.viewport}px / ${props => props.size});
-    height: calc(${props => props.theme.width.viewport}px / ${props => props.size});
-
-    box-shadow: inset 0 0 0 1px ${props => props.theme.colors.background};
+    max-width: calc(${props => props.theme.size.viewport}px / ${props => props.size});
+    max-height: calc(${props => props.theme.size.viewport}px / ${props => props.size});
+    width: calc(${props => props.theme.size.viewport}px / ${props => props.size});
+    height: calc(${props => props.theme.size.viewport}px / ${props => props.size});
 
     > div {
         display: flex;
@@ -29,14 +28,13 @@ export const StyledCard = styled (animated.div)`
         width: 100%;
         height: 100%;
 
-        cursor: pointer;
     }
 `
 
 export const StyledCardFront = styled (StyledCard)`
-    background: darkgray;
+    //background: darkgray;
 `
 
 export const StyledCardBack = styled (StyledCard)`
-    background: lightgray;
+    //background: lightgray;
 `
