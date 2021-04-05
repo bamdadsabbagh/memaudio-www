@@ -1,22 +1,53 @@
 import React from 'react'
 import Card from '@/components/card'
-import styles from './card-grid.module.scss'
+import styled from 'styled-components'
 
-export default function CardGrid ({ width, height, children }) {
+const StyledContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    const totalChildren = width + height
+    width: 450px;
+    height: 450px;
+`
 
-    console.log (width, height)
+const StyledGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(${props => props.size}, 1fr);
+    grid-template-rows: repeat(${props => props.size}, 1fr);
+    height: 100%;
+    width: 100%;
+    grid-gap: 0.333rem;
+`
 
-    console.log (totalChildren)
+export default function CardGrid ({ children }) {
+
+    let size = children.length ** 0.5
+
+    // if is not a perfect square, round it up to the next
+    if (size % 1 !== 0) size = parseInt (size.toFixed (), 10) + 1
+
+    if (Number.isNaN (size)) size = 1
 
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.grid}>
-                    {children}
-                </div>
-            </div>
+            <StyledContainer>
+                <StyledGrid size={size}>
+                    {
+                        size === 1
+                            ?
+                                <Card size={size}>
+                                    {children}
+                                </Card>
+                            :
+                            children.map (child => (
+                                <Card size={size}>
+                                    {child.props.children}
+                                </Card>
+                            ))
+                    }
+                </StyledGrid>
+            </StyledContainer>
         </>
     )
 

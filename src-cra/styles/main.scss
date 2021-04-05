@@ -1,0 +1,73 @@
+@import '~sass-reset';
+@import 'colors';
+@import 'app';
+@import 'app-responsive';
+
+// page-home.css
+
+.icon-next, .icon-minus, .icon-plus {
+    transition: 250ms;
+}
+
+.icon-next:hover, .icon-next:active {
+    cursor: pointer;
+    color: $color-yellow;
+}
+
+.icon-minus:hover, .icon-minus:active {
+    cursor: pointer;
+    color: $color-blue;
+}
+
+.icon-plus:hover, .icon-plus:active {
+    cursor: pointer;
+    color: $color-red;
+}
+
+// animation-flip.css
+
+.flipper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.flipper-back {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.flipper.clickable, .flipper-back.clickable {
+    cursor: pointer;
+}
+
+.flipper-back.x1 {
+    margin-top: -450px;
+}
+
+.flipper-back.x2 {
+    margin-top: -225px;
+}
+
+.flipper-back.x4 {
+    margin-top: -112px;
+}
+
+@media only screen and (max-width: 768px) {
+    .flipper-back.x1 {
+        margin-top: -300px;
+    }
+
+    .flipper-back.x2 {
+        margin-top: -150px;
+    }
+
+    .flipper-back.x4 {
+        margin-top: -75px;
+    }
+}

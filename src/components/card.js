@@ -7,6 +7,7 @@ const StyledContainer = styled.div`
     justify-content: center;
     align-items: center;
     user-select: none;
+    background: black;
 `
 
 const StyledCard = styled (animated.div)`
@@ -16,10 +17,10 @@ const StyledCard = styled (animated.div)`
     justify-content: center;
     align-items: center;
 
-    max-width: calc(450px / 2);
-    max-height: calc(450px / 2);
-    width: calc(450px / 2);
-    height: calc(450px / 2);
+    max-width: calc(450px / ${props => props.size});
+    max-height: calc(450px / ${props => props.size});
+    width: calc(450px / ${props => props.size});
+    height: calc(450px / ${props => props.size});
 
     cursor: pointer;
     //will-change: transform, opacity;
@@ -35,17 +36,9 @@ const StyledCardBack = styled (StyledCard)`
     background: blue;
 `
 
-export default function Card ({ children }) {
+export default function Card ({ size, children }) {
 
     const [flipped, setFlipped] = useState (false)
-
-    console.log (flipped)
-
-    // const { transform, opacity } = useSpring ({
-    //     'opacity': flipped ? 1 : 0,
-    //     'transform': `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
-    //     'config': { 'mass': 10, 'tension': 500, 'friction': 80 },
-    // })
 
     const { opacity, transform } = useSpring ({
         'opacity': flipped ? 1 : 0,
@@ -58,11 +51,13 @@ export default function Card ({ children }) {
             onClick={() => setFlipped (flipped => !flipped)}
         >
             <StyledCardFront
+                size={size}
                 style={{ 'opacity': opacity.interpolate (o => 1 - o), transform }}
             >
                 {children}
             </StyledCardFront>
             <StyledCardBack
+                size={size}
                 style={{ opacity, 'transform': transform.interpolate (t => `${t} rotateY(180deg)`) }}
             >
                 {children}
