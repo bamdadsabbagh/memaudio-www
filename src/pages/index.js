@@ -1,8 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import CardGridModule from '@/components/card-grid/card-grid.module'
-import { FaHeadphones } from 'react-icons/fa'
-import { StyledDiv, StyledIcon } from '@/styles/index.styles'
+import { StyledDiv, StyledDivBlue, StyledDivGreen, StyledDivRed, StyledDivWhite } from '@/styles/index.styles'
+import { FaHeadphones, FaQuestion } from 'react-icons/fa'
+import { FiHeadphones, FiPlay, FiUser } from 'react-icons/fi'
 
 export default function PageIndex () {
 
@@ -15,24 +16,63 @@ export default function PageIndex () {
             </Head>
             <>
                 <CardGridModule>
-                    <StyledDiv noback="true">
-                        <StyledIcon>
-                            <FaHeadphones/>
-                        </StyledIcon>
-                        <div>memaudio</div>
-                    </StyledDiv>
+                    <StyledDivWhite>
+                        <FaHeadphones/>
+                    </StyledDivWhite>
+                    <StyledDivBlue noback="true">
+                        <FiPlay/>
+                    </StyledDivBlue>
                     <StyledDiv>
-                        <StyledIcon><FaHeadphones/></StyledIcon>
-                        <div>MemAudio</div>
+                        <FiHeadphones/>
                     </StyledDiv>
-                    <StyledDiv>
-                        <StyledIcon><FaHeadphones/></StyledIcon>
-                        <div>MemAudio</div>
-                    </StyledDiv>
-                    <StyledDiv>
-                        <StyledIcon><FaHeadphones/></StyledIcon>
-                        <div>MemAudio</div>
-                    </StyledDiv>
+                    <StyledDivRed>
+                        <FiUser/>
+                    </StyledDivRed>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
                 </CardGridModule>
             </>
         </>
