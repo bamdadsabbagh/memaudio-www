@@ -27,7 +27,6 @@ export const StyledCard = styled (animated.div)`
         align-items: center;
         width: 100%;
         height: 100%;
-
     }
 `
 

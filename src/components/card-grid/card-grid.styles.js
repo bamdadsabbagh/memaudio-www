@@ -5,11 +5,8 @@ export const StyledContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    //width: 450px;
-    //height: 450px;
-
-    width: 100%;
-    height: 100%;
+    width: ${props => props.theme.size.viewport}px;
+    height: ${props => props.theme.size.viewport}px;
 `
 
 export const StyledGrid = styled.div`
@@ -18,6 +15,7 @@ export const StyledGrid = styled.div`
     grid-template-rows: repeat(${props => props.size}, 1fr);
     width: 100%;
     height: 100%;
-    grid-gap: 0.333rem;
+    //grid-gap: 0.333rem;
+    grid-gap: ${props => props.theme.size.viewport * 0.03}px;
 `
 
