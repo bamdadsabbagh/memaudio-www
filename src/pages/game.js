@@ -17,7 +17,7 @@ export default function PageIndex () {
             </Head>
             <>
                 <CardGridComponent>
-                    <Link href="/game">
+                    <Link href="/">
                         <StyledDivWhite>
                             <FaHeadphones/>
                         </StyledDivWhite>
@@ -28,6 +28,24 @@ export default function PageIndex () {
                     <StyledDivRed>
                         <FiUser/>
                     </StyledDivRed>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
+                    <StyledDivGreen>
+                        <FaQuestion/>
+                    </StyledDivGreen>
                     <StyledDivGreen>
                         <FaQuestion/>
                     </StyledDivGreen>

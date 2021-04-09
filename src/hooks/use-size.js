@@ -1,24 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export function useSize (length) {
 
-    const [size, setSize] = useState (null)
+    const [size] = useState (() => {
 
-    useEffect (() => {
+        let size = length ** 0.5
 
-        let newSize = length ** 0.5
+        if (size % 1 !== 0) size = parseInt (size.toFixed (), 10) + 1
 
-        // if size is not an integer, round it up to next integer
-        // in order to have a perfect square
-        if (newSize % 1 !== 0) newSize = parseInt (newSize.toFixed (), 10) + 1
+        if (Number.isNaN (size)) size = 1
 
-        if (Number.isNaN (newSize)) newSize = 1
+        return size
 
-        setSize (newSize)
+    })
 
-    }, [length])
-
-    if (size === null) return null
+    // console.log ('useSize %i', size)
 
     return size
 
