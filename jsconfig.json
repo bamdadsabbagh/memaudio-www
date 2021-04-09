@@ -8,11 +8,17 @@
             "@/data/*": [
                 "data/*"
             ],
+            "@/hooks/*": [
+                "hooks/*"
+            ],
             "@/lib/*": [
                 "lib/*"
             ],
             "@/pages/*": [
                 "pages/*"
+            ],
+            "@/pages-styles/*": [
+                "pages-styles/*"
             ],
             "@/styles/*": [
                 "styles/*"

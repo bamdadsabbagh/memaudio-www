@@ -13,9 +13,12 @@ export const StyledGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(${props => props.size}, 1fr);
     grid-template-rows: repeat(${props => props.size}, 1fr);
-    width: 100%;
-    height: 100%;
+    height: 50%;
+    width: 50%;
+
+    background: transparent;
     //grid-gap: 0.333rem;
     grid-gap: ${props => props.theme.size.viewport * 0.03}px;
+        //grid-gap: ${props => props.theme.size.viewport * 0.2}px;
 `
 

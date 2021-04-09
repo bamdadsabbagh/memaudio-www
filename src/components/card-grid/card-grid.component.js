@@ -1,17 +1,13 @@
 import React from 'react'
 import CardComponent from '@/components/card/card.component'
 import { StyledContainer, StyledGrid } from '@/components/card-grid/card-grid.styles'
+import { useSize } from '@/hooks/use-size'
 
 export default function CardGridComponent ({ children }) {
 
-    // const [size, setSize] = useRecoilState (CardGridStateSize)
-    // size = setSize (children.length ** 0.5)
-    let size = children.length ** 0.5
+    const size = useSize (children.length)
 
-    // if is not a perfect square, round it up to the next
-    if (size % 1 !== 0) size = parseInt (size.toFixed (), 10) + 1
-
-    if (Number.isNaN (size)) size = 1
+    if (size === null) return <>Loading...</>
 
     return (
         <>
@@ -20,14 +16,12 @@ export default function CardGridComponent ({ children }) {
                     {
                         size === 1
                             ?
-                            // eslint-disable-next-line react/jsx-props-no-spreading
                                 <CardComponent {...children.props} size={size}>
                                     {children}
                                 </CardComponent>
                             :
-                            children.map ((child, key) => (
-                                // eslint-disable-next-line react/jsx-props-no-spreading,react/no-array-index-key
-                                <CardComponent {...child.props} size={size} key={key}>
+                            children.map ((child, index) => (
+                                <CardComponent {...child.props} size={size} key={index}>
                                     {child}
                                 </CardComponent>
                             ))

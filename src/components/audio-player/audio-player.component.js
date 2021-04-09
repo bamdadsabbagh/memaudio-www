@@ -1,5 +1,11 @@
-export default function AudioPlayerComponent () {
+import React from 'react'
 
-    return null
+export default function AudioPlayerComponent ({ children }) {
+
+    return (
+        <>
+            {children}
+        </>
+    )
 
 }

@@ -14,11 +14,11 @@ export default function CardComponent ({ size, children }) {
 
     return (
         <StyledContainer
-            onClick={() => setFlipped (flipped => !flipped)}
         >
             <StyledCardFront
                 size={size}
                 style={{ 'opacity': opacity.interpolate (o => 1 - o), transform }}
+                onClick={() => setFlipped (f => !f)}
             >
                 {children}
             </StyledCardFront>
@@ -28,6 +28,7 @@ export default function CardComponent ({ size, children }) {
                     null
                     :
                     <StyledCardBack
+                        onClick={() => setFlipped (f => !f)}
                         size={size}
                         style={{
                             opacity,

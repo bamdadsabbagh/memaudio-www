@@ -22,5 +22,5 @@ export const StyledCircle = styled.div`
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.3));
     margin-bottom: ${props => props.theme.size.viewport}px;
-    margin-right: ${props => props.theme.size.viewport / Math.sqrt (2)}px;
+    margin-right: ${props => props.theme.size.viewport / Math.sqrt (4)}px;
 `

@@ -15,7 +15,6 @@ export default function MyApp ({ Component, pageProps }) {
             <ThemeProvider theme={StyledTheme}>
                 <LayoutComponent>
                     <RecoilRoot>
-                        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
                         <Component {...pageProps} />
                     </RecoilRoot>
                 </LayoutComponent>

@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
                 'enhanceApp': (App) =>
                     (props) =>
                         sheet.collectStyles (
-                            // eslint-disable-next-line react/jsx-props-no-spreading
                             <App {...props} />,
                         ),
             })
