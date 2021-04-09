@@ -7,7 +7,6 @@ export const StyledContainer = styled.div`
     align-items: center;
     user-select: none;
     cursor: pointer;
-    background: red;
 `
 
 export const StyledCard = styled (animated.div)`

@@ -8,7 +8,10 @@
         "url": "https://bamdadsabbagh.com/"
     },
     "scripts": {
+        "build": "next build",
         "dev": "next dev",
+        "export": "next export",
+        "start": "next start",
         "cra:build": "yarn build:run",
         "cra:build:clean": "rm -rf build",
         "cra:build:dev": "yarn build:clean && build:run",
