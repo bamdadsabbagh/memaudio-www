@@ -21,6 +21,8 @@ export const StyledCircle = styled.div`
     background: linear-gradient(to right bottom,
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.3));
-    margin-bottom: ${props => props.theme.size.viewport}px;
-    margin-right: ${props => props.theme.size.viewport / Math.sqrt (4)}px;
+        //margin-bottom: ${props => props.theme.size.viewport}px;
+        //margin-right: ${props => props.theme.size.viewport / Math.sqrt (4)}px;
+    margin-bottom: 30vh;
+    margin-right: 30vh;
 `
